@@ -1,6 +1,7 @@
 import "aframe";
 import "aframe-animation-component";
 import "aframe-particle-system-component";
+import "aframe-teleport-controls";
 import "babel-polyfill";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
@@ -21,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <Scene>
+        {/* <Entity teleport-controls gearvr-controls /> */}
         <a-assets>
           <img
             id="groundTexture"
