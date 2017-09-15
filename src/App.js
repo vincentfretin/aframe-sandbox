@@ -2,6 +2,7 @@ import "aframe";
 import "aframe-animation-component";
 import "aframe-particle-system-component";
 import "aframe-teleport-controls";
+import "aframe-environment-component";
 import "babel-polyfill";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
@@ -23,6 +24,7 @@ class App extends React.Component {
     return (
       <Scene>
         {/* <Entity teleport-controls gearvr-controls /> */}
+        <Entity environment="preset: forest; dressingAmount: 20" />
         <a-assets>
           <img
             id="groundTexture"
@@ -32,34 +34,39 @@ class App extends React.Component {
             id="skyTexture"
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           />
-          <img
-            id="skyTexture2"
-            src="http://localhost:3000/HdrSkyCloudy004_JPG_6K.jpg"
+          <a-asset-item
+            id="dyno-obj"
+            src={require("./assets/dyno/model.obj")}
+          />
+          <a-asset-item
+            id="dyno-mtl"
+            src={require("./assets/dyno/materials.mtl")}
           />
         </a-assets>
-
+        <Entity obj-model="obj: #dyno-obj; mtl: #dyno-mtl" position="2 2 2" />
+        {/* 
         <Entity
           primitive="a-plane"
           src="#groundTexture"
           rotation="-90 0 0"
           height="100"
           width="100"
-        />
-        <Entity primitive="a-light" type="ambient" color="#445451" />
+        /> */}
+        {/* <Entity primitive="a-light" type="ambient" color="#445451" />
         <Entity
           primitive="a-light"
           type="point"
           intensity="2"
           position="2 4 4"
-        />
-        <Entity
+        /> */}
+        {/* <Entity
           primitive="a-sky"
           height="2048"
           radius="30"
           src="#skyTexture"
           theta-length="90"
           width="2048"
-        />
+        /> */}
         {/* <Entity particle-system={{ preset: "snow", particleCount: 2000 }} /> */}
         <Entity
           text={{ value: "Salut Michael!", align: "center" }}

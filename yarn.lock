@@ -55,6 +55,10 @@ aframe-animation-component@^3.2.5:
   dependencies:
     animejs "^1.1.0"
 
+aframe-environment-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/aframe-environment-component/-/aframe-environment-component-1.0.0.tgz#dde6a8734dc7777d9c4a00b5bab25f877e8b3b37"
+
 aframe-particle-system-component@^1.0.8:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/aframe-particle-system-component/-/aframe-particle-system-component-1.0.10.tgz#dc2174072f4ef7d1757a1bfd3d86be4e8768bb30"
