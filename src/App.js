@@ -67,6 +67,12 @@ class App extends React.Component {
         />
 
         <Entity
+          geometry={{ primitive: "box" }}
+          material={{ color: this.state.color, opacity: 0.6 }}
+          position={{ x: 2, y: 1, z: -3 }}
+        />
+
+        <Entity
           id="box"
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
