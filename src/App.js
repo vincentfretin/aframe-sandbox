@@ -1,9 +1,9 @@
-import "aframe";
+// import "aframe";
+import "babel-polyfill";
 import "aframe-animation-component";
 import "aframe-particle-system-component";
 import "aframe-teleport-controls";
 import "aframe-environment-component";
-import "babel-polyfill";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 
@@ -26,11 +26,11 @@ class App extends React.Component {
         {/* <Entity teleport-controls gearvr-controls /> */}
         <Entity environment="preset: forest; dressingAmount: 20" />
         <a-assets>
-          <img
+          <a-asset-item
             id="groundTexture"
             src="https://cdn.aframe.io/a-painter/images/floor.jpg"
           />
-          <img
+          <a-asset-item
             id="skyTexture"
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           />

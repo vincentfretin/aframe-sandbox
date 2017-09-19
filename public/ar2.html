@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+		<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/google-ar/three.ar.js/master/dist/three.ar.js"></script>
+    <script src="https://rawgit.com/chenzlabs/aframe-three-ar/master/dist/aframe-three-ar.js"></script>
+    <script>
+
+      AFRAME.registerSystem('ar-reticle', {
+        init: function () {
+          THREE.ARUtils.getARDisplay().then(function (display) {
+            if (display) {
+              this.reticle = new THREE.ARReticle(display, 0.03, 0.04, 0xff0077, 0.25);
+              this.sceneEl.object3D.add(this.reticle);
+            } else {
+              console.log('No AR support');
+            }
+          }.bind(this));
+        },
+        tick: function () {
+          if (this.reticle) {
+            this.reticle.update(0.5, 0.5);
+          }
+        }
+      });
+      
+      AFRAME.registerComponent('samsung-logo', {
+        init: function () {
+          var el = this.el;
+          var purple = new THREE.MeshBasicMaterial();
+          purple.color = new THREE.Color('#706CF5');
+          var white = new THREE.MeshBasicMaterial();
+          white.color = new THREE.Color('#ffffff');
+          el.addEventListener('model-loaded', function () {
+            el.object3D.traverse(function (o) {
+              if (o.material) o.material = o.material.name === 'Purple' ? purple : white;
+            })
+          });
+        }
+      });
+
+      const tempMat4 = new THREE.Matrix4();
+      const tempPos = new THREE.Vector3();
+      const tempQuat = new THREE.Quaternion();
+      const tempScale = new THREE.Vector3();
+      const content = `
+      <a-entity obj-model="obj: #samsung-internet-obj;mtl: #samsung-internet-mtl" samsung-logo >
+        <a-animation from="0 -360 45" to="0 0 0" easing="ease-out-back" begin="model-loaded" dur="3000"></a-animation>
+        <a-animation from="0 0 0" to="1 1 1" easing="ease-out-back" begin="model-loaded" dur="2000" attribute="scale"></a-animation>
+        <a-animation from="0 -1 0" to="0 0 0" easing="ease-out-back" begin="model-loaded" dur="1000" attribute="position"></a-animation>
+      </a-entity>`;
+      
+      window.addEventListener('click', function () {
+        THREE.ARUtils.getARDisplay().then(function (display) {
+          
+          if (!display) return;
+          
+          // Test where the reticle is
+          var hits = display.hitTest(0.5, 0.5);
+          if (hits && hits.length) {
+            var hit = hits[0];
+            tempMat4.fromArray(hit.modelMatrix);
+            tempMat4.decompose(tempPos, tempQuat, tempScale);
+            var el = document.createElement('a-entity');
+            AFRAME.scenes[0].appendChild(el);
+            el.innerHTML = content;
+            el.setAttribute('scale', '0.1, 0.1, 0.1');
+            el.setAttribute('position', tempPos);
+            AFRAME.scenes[0].systems['ar-reticle'].reticle.material.color.r = Math.random();
+            AFRAME.scenes[0].systems['ar-reticle'].reticle.material.color.g = Math.random();
+            AFRAME.scenes[0].systems['ar-reticle'].reticle.material.color.b = Math.random();
+          }
+        });
+      });
+    </script>
+	</head>
+	<body>
+		<a-scene three-ar vr-mode-ui="enabled:false" ar-reticle>
+			<a-assets>
+				<a-asset-item src="https://cdn.glitch.com/843c8e83-ac9e-499e-8aba-1332cd1fe4a6%2Fsilogo.mtl?1502470550479" id="samsung-internet-mtl"></a-asset-item>
+				<a-asset-item src="https://cdn.glitch.com/843c8e83-ac9e-499e-8aba-1332cd1fe4a6%2Fsilogo_small.obj?1502705824920" id="samsung-internet-obj"></a-asset-item>
+			</a-assets>
+
+		</a-scene>
+	</body>
+</html>

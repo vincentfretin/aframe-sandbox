@@ -2,12 +2,12 @@ import "react-hot-loader/patch";
 import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./AppAR";
+import App from "./App";
 import { AppContainer } from "react-hot-loader";
 
 if (module.hot) {
-  module.hot.accept("./AppAR", () => {
-    const NewApp = require("./AppAR").default; // eslint-disable-line
+  module.hot.accept("./App", () => {
+    const NewApp = require("./App").default; // eslint-disable-line
     ReactDOM.render(
       <AppContainer>
         <NewApp />
