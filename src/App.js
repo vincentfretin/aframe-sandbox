@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <Scene>
-        <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 8; dressingAmount: 0" />
+        <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 8; dressingAmount: 10" />
         <a-box
           id="floorgeometry"
           static-body
@@ -50,6 +50,21 @@ class App extends React.Component {
             id="dyno-mtl"
             src={require("./assets/dyno/materials.mtl")}
           /> */}
+
+          <a-mixin
+            id="cube"
+            geometry="primitive: box; width: 0.33; height: 0.33; depth: 0.33"
+            hoverable
+            grabbable
+            drag-droppable
+            dynamic-body
+            shadow
+          />
+          <a-mixin
+            id="cube-hovered"
+            material="opacity: 0.7; transparent: true"
+          />
+          <a-mixin id="cube-dragover" material="wireframe: true;" />
         </a-assets>
         {/* <Entity obj-model="obj: #dyno-obj; mtl: #dyno-mtl" position="2 2 2" /> */}
 
@@ -89,6 +104,9 @@ class App extends React.Component {
 
         <Entity
           dynamic-body
+          hoverable
+          grabbable
+          drag-droppable
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           position={{ x: 2, y: 1, z: -3 }}
@@ -97,6 +115,9 @@ class App extends React.Component {
 
         <Entity
           id="box"
+          hoverable
+          grabbable
+          drag-droppable
           dynamic-body
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
@@ -130,6 +151,43 @@ class App extends React.Component {
           />
         </Entity>
 
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="0 0.265 -1"
+          material="color: red"
+        />
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="0 0.265 -0.5"
+          material="color: red"
+        />
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="-1 0.265 -1"
+          material="color: blue"
+        />
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="-1 0.265 -0.5"
+          material="color: blue"
+        />
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="1 0.265 -1"
+          material="color: green"
+        />
+        <a-entity
+          class="cube"
+          mixin="cube"
+          position="1 0.265 -0.5"
+          material="color: green"
+        />
+
         {/* <Entity primitive="a-camera">
           <Entity
             primitive="a-cursor"
@@ -144,15 +202,18 @@ class App extends React.Component {
         </Entity> */}
 
         <a-entity id="cameraRig">
-          {/* <a-entity wasd-controls look-controls /> */}
+          {/* <a-camera universal-controls="movementControls: gamepad" /> */}
           <a-camera />
-          {/* maxLength: 20; type: line; */}
-          {/* collisionEntities: [class='cube'], #floorgeometry */}
           <a-entity
-            teleport-controls="cameraRig: #cameraRig; button: trigger; collisionEntities: [class='cube'], #floorgeometry"
-            gearvr-controls
+            class="right-controller"
+            // teleport-controls="cameraRig: #cameraRig; button: trigger; collisionEntities: [class='cube'], #floorgeometry"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: [class='cube'], #floorgeometry"
+            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: [class='cube'], [class='environmentGround']"
+            // gearvr-controls
             laser-controls
+            raycaster="objects: .cube"
             line="color: red; opacity: 0.75"
+            // super-hands
           />
         </a-entity>
       </Scene>
