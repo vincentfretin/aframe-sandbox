@@ -23,14 +23,14 @@ class App extends React.Component {
   render() {
     return (
       <Scene>
-        {/* <Entity teleport-controls gearvr-controls /> */}
-        <Entity environment="preset: forest; dressingAmount: 20" />
+        <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 8; dressingAmount: 0" />
         <a-assets>
-          <a-asset-item
+          {/* <img
             id="groundTexture"
             src="https://cdn.aframe.io/a-painter/images/floor.jpg"
-          />
-          <a-asset-item
+            alt=""
+          /> */}
+          {/* <a-asset-item
             id="skyTexture"
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           />
@@ -41,19 +41,25 @@ class App extends React.Component {
           <a-asset-item
             id="dyno-mtl"
             src={require("./assets/dyno/materials.mtl")}
-          />
+          /> */}
         </a-assets>
-        <Entity obj-model="obj: #dyno-obj; mtl: #dyno-mtl" position="2 2 2" />
-        {/* 
-        <Entity
+        {/* <Entity obj-model="obj: #dyno-obj; mtl: #dyno-mtl" position="2 2 2" /> */}
+
+        {/* <Entity
           primitive="a-plane"
           src="#groundTexture"
           rotation="-90 0 0"
           height="100"
           width="100"
         /> */}
-        {/* <Entity primitive="a-light" type="ambient" color="#445451" />
-        <Entity
+        {/* <a-entity
+          id="floorgeometry"
+          position="0 0.15 0"
+          geometry="primitive: plane; width: 100; height: 100"
+          rotation="-90 0 0"
+        /> */}
+        {/* <Entity primitive="a-light" type="ambient" color="#445451" /> */}
+        {/* <Entity
           primitive="a-light"
           type="point"
           intensity="2"
@@ -77,6 +83,7 @@ class App extends React.Component {
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           position={{ x: 2, y: 1, z: -3 }}
+          class="cube"
         />
 
         <Entity
@@ -98,6 +105,7 @@ class App extends React.Component {
           // }}
           position={{ x: 0, y: 1, z: -3 }}
           events={{ click: this.changeColor.bind(this) }}
+          class="cube"
         >
           <Entity
             // animation__scale={{
@@ -112,7 +120,7 @@ class App extends React.Component {
           />
         </Entity>
 
-        <Entity primitive="a-camera">
+        {/* <Entity primitive="a-camera">
           <Entity
             primitive="a-cursor"
             animation__click={{
@@ -123,7 +131,20 @@ class App extends React.Component {
               dur: 150
             }}
           />
-        </Entity>
+        </Entity> */}
+
+        <a-entity id="cameraRig">
+          {/* <a-entity wasd-controls look-controls /> */}
+          <a-camera />
+          {/* maxLength: 20; type: line; */}
+          {/* collisionEntities: [class='cube'], #floorgeometry */}
+          <a-entity
+            teleport-controls="cameraRig: #cameraRig; maxLength: 20; type: line; button: trigger;"
+            gearvr-controls
+            laser-controls
+            line="color: red; opacity: 0.75"
+          />
+        </a-entity>
       </Scene>
     );
   }
