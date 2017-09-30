@@ -57,7 +57,7 @@ aframe-animation-component@^3.2.5:
 
 aframe-ar@chenzlabs/aframe-ar:
   version "0.1.0"
-  resolved "https://codeload.github.com/chenzlabs/aframe-ar/tar.gz/768d3228e384f16f54e59bae7db0ef8c6b7d55c2"
+  resolved "https://codeload.github.com/chenzlabs/aframe-ar/tar.gz/537c51c5d3f84f71c37eeabfd3dd8bc6405b8053"
 
 aframe-environment-component@^1.0.0:
   version "1.0.0"
@@ -4888,8 +4888,8 @@ react-dev-utils@^0.5.2:
     strip-ansi "3.0.1"
 
 react-dom@^15.4.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.1.0"
@@ -4914,8 +4914,8 @@ react-proxy@^3.0.0-alpha.0:
     lodash "^4.6.1"
 
 react@^15.4.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
     create-react-class "^15.6.0"
     fbjs "^0.8.9"
@@ -5717,8 +5717,8 @@ three-buffer-vertex-data@^1.0.0:
     flatten-vertex-data "^1.0.0"
 
 three.ar.js@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/three.ar.js/-/three.ar.js-0.1.3.tgz#6cfdba43a18958a4da1c585f77a76c01cada593c"
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/three.ar.js/-/three.ar.js-0.1.4.tgz#52e69b263a9c180ac4c8aedea65d42679fe1af10"
 
 three@^0.84.0:
   version "0.84.0"
