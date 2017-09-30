@@ -24,6 +24,13 @@ class App extends React.Component {
     return (
       <Scene>
         <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 8; dressingAmount: 0" />
+        <a-box
+          static-body
+          width="100"
+          height="0.001"
+          depth="100"
+          visible="false"
+        />
         <a-assets>
           {/* <img
             id="groundTexture"
@@ -80,6 +87,7 @@ class App extends React.Component {
         />
 
         <Entity
+          dynamic-body
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           position={{ x: 2, y: 1, z: -3 }}
@@ -88,6 +96,7 @@ class App extends React.Component {
 
         <Entity
           id="box"
+          dynamic-body
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           // animation__rotate={{
