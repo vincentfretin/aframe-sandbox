@@ -25,6 +25,7 @@ class App extends React.Component {
       <Scene>
         <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 8; dressingAmount: 0" />
         <a-box
+          id="floorgeometry"
           static-body
           width="100"
           height="0.001"
@@ -148,7 +149,7 @@ class App extends React.Component {
           {/* maxLength: 20; type: line; */}
           {/* collisionEntities: [class='cube'], #floorgeometry */}
           <a-entity
-            teleport-controls="cameraRig: #cameraRig; maxLength: 20; type: line; button: trigger;"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; collisionEntities: [class='cube'], #floorgeometry"
             gearvr-controls
             laser-controls
             line="color: red; opacity: 0.75"
