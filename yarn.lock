@@ -71,13 +71,13 @@ aframe-react@^4.0.x:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/aframe-react/-/aframe-react-4.3.0.tgz#43eba68be4a1e88830aac404e90ac033945fbf54"
 
-aframe-teleport-controls@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/aframe-teleport-controls/-/aframe-teleport-controls-0.2.0.tgz#1ce1a8489daaf3feacea354ad1ccf6fdd8b53157"
+aframe-teleport-controls@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/aframe-teleport-controls/-/aframe-teleport-controls-0.3.0.tgz#7c854941757703f06a5100e47abccfeeb427d7fc"
 
-aframe@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/aframe/-/aframe-0.6.1.tgz#291d6aad47586e09d04689fd48c1fb03f0ba63a5"
+aframe@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/aframe/-/aframe-0.7.0.tgz#2c7b31466452d0060ad14426f8d660f97440e3b8"
   dependencies:
     "@tweenjs/tween.js" "^16.8.0"
     browserify-css "^0.8.2"
@@ -90,7 +90,7 @@ aframe@^0.6.1:
     present "0.0.6"
     promise-polyfill "^3.1.0"
     style-attr "^1.0.2"
-    three "^0.84.0"
+    three "^0.87.0"
     three-bmfont-text "^2.1.0"
     webvr-polyfill "^0.9.36"
 
@@ -1794,7 +1794,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@2.2.0, debug@ngokevin/debug#noTimestamp, debug@~2.2.0:
+debug@2.2.0, "debug@github:ngokevin/debug#noTimestamp", debug@~2.2.0:
   version "2.2.0"
   resolved "https://codeload.github.com/ngokevin/debug/tar.gz/ef5f8e66d49ce8bc64c6f282c15f8b7164409e3a"
 
@@ -1923,7 +1923,7 @@ doctrine@^1.2.2:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
-document-register-element@dmarcos/document-register-element#8ccc532b7:
+"document-register-element@github:dmarcos/document-register-element#8ccc532b7":
   version "0.5.4"
   resolved "https://codeload.github.com/dmarcos/document-register-element/tar.gz/8ccc532b7f3744be954574caf3072a5fd260ca90"
 
@@ -5720,9 +5720,9 @@ three.ar.js@^0.1.3:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/three.ar.js/-/three.ar.js-0.1.4.tgz#52e69b263a9c180ac4c8aedea65d42679fe1af10"
 
-three@^0.84.0:
-  version "0.84.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.84.0.tgz#95be85a55a0fa002aa625ed559130957dcffd918"
+three@^0.87.0:
+  version "0.87.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.87.1.tgz#466a34edc4543459ced9b9d7d276b65216fe2ba8"
 
 throat@^3.0.0:
   version "3.2.0"
