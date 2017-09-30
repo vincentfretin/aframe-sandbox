@@ -1,5 +1,5 @@
 // import "aframe";
-import "babel-polyfill";
+// import "babel-polyfill";
 import "aframe-animation-component";
 import "aframe-particle-system-component";
 import "aframe-teleport-controls";
