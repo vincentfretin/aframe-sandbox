@@ -418,7 +418,7 @@ vt 0.67795 0.414792
 vt 0.119589 0.0194391
 mtllib gear_vr_controller.mtl
 usemtl Base
-g Default
+g Base
 f 48/1/1 14/2/2 1/3/3
 f 52/4/4 14/2/2 48/1/1
 f 7/5/5 8/6/6 9/7/7
