@@ -75,12 +75,6 @@ class App extends React.Component {
           height="100"
           width="100"
         /> */}
-        {/* <a-entity
-          id="floorgeometry"
-          position="0 0.15 0"
-          geometry="primitive: plane; width: 100; height: 100"
-          rotation="-90 0 0"
-        /> */}
         {/* <Entity primitive="a-light" type="ambient" color="#445451" /> */}
         {/* <Entity
           primitive="a-light"
