@@ -1,7 +1,7 @@
 ## This is my sandbox with aframe
 
 The initial commit of this repo is actually
-ngokevin's ([aframe-react-boilerplate](https://github.com/ngokevin/aframe-react-boilerplate)
+ngokevin's [aframe-react-boilerplate](https://github.com/ngokevin/aframe-react-boilerplate)
 where I did the following to be able to use hot reloading properly:
 
     npm run eject
@@ -9,14 +9,14 @@ where I did the following to be able to use hot reloading properly:
 
 add to package.json:
 
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      "react-hot-loader/babel"
-    ]
-  }
+    "babel": {
+      "presets": [
+        "react-app"
+      ],
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    }
 
 and configure hot module reloading in `src/index.js`
 
