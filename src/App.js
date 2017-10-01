@@ -1,9 +1,13 @@
-// import "aframe";
 // import "babel-polyfill";
+import "aframe";
 import "aframe-animation-component";
 import "aframe-particle-system-component";
 import "aframe-teleport-controls";
 import "aframe-environment-component";
+import "aframe-physics-system";
+import "aframe-extras";
+import "aframe-event-set-component";
+import "super-hands";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 
@@ -207,7 +211,7 @@ class App extends React.Component {
             laser-controls
             raycaster="objects: .cube"
             line="color: red; opacity: 0.75"
-            // super-hands
+            super-hands
           />
         </a-entity>
       </Scene>
