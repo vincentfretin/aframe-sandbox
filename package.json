@@ -1,6 +1,6 @@
 {
-  "name": "aframe-react-boilerplate",
-  "version": "3.0.1",
+  "name": "aframe-sandbox",
+  "version": "1.0.0",
   "description": "Boilerplate for building virtual reality experiences with A-Frame and React.",
   "dependencies": {
     "aframe": "vincentfretin/aframe#fix-increasing-offset",
@@ -46,7 +46,7 @@
   "bugs": {
     "url": "https://github.com/vincentfretin/aframe-sandbox/issues"
   },
-  "homepage": "https://github.com/vincentfretin/aframe-sandbox#readme",
+  "homepage": "https://vincentfretin.github.io/aframe-sandbox/",
   "devDependencies": {
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
