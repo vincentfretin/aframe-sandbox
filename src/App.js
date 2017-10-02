@@ -27,21 +27,12 @@ class App extends React.Component {
     return (
       <Scene>
         <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 10; dressingAmount: 20" />
-        {/* <a-box
+        <a-box
           id="floorgeometry"
           static-body
           width="100"
           height="0.001"
           depth="100"
-          visible="false"
-        /> */}
-        <a-entity
-          static-body
-          id="floorgeometry"
-          position="0 0.15 0"
-          // geometry="primitive: plane; width: 100; height: 100"
-          // rotation="-90 0 0"
-          geometry="primitive: box; width: 100; height: 0.001; depth: 100"
           visible="false"
         />
         <a-assets>
@@ -69,7 +60,6 @@ class App extends React.Component {
           />
           <a-mixin id="cube-dragover" material="wireframe: true;" />
         </a-assets>
-        {/* <Entity obj-model="obj: #dyno-obj; mtl: #dyno-mtl" position="2 2 2" /> */}
 
         {/* <Entity
           primitive="a-plane"
@@ -204,13 +194,7 @@ class App extends React.Component {
           {/* <a-entity camera look-controls /> */}
           <a-entity
             class="right-controller"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; collisionEntities: [class='cube'], #floorgeometry"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: #floorgeometry"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: .environmentGround, .cube"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: .environmentGround, .cube, #floorgeometry"
-            // teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 20; type: line; collisionEntities: [class='cube'], [class='environmentGround']"
             // gearvr-controls
             laser-controls
             raycaster="objects: .cube"
