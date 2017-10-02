@@ -50,17 +50,9 @@ class App extends React.Component {
             src="https://cdn.aframe.io/a-painter/images/floor.jpg"
             alt=""
           /> */}
-          {/* <a-asset-item
+          {/* <img
             id="skyTexture"
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
-          />
-          <a-asset-item
-            id="dyno-obj"
-            src={require("./assets/dyno/model.obj")}
-          />
-          <a-asset-item
-            id="dyno-mtl"
-            src={require("./assets/dyno/materials.mtl")}
           /> */}
 
           <a-mixin
