@@ -1,4 +1,10 @@
-## This is my sandbox with aframe
+## This is my sandbox with A-Frame
+
+I publish some time to time a working version at
+[https://vincentfretin.github.io/aframe-sandbox/](https://vincentfretin.github.io/aframe-sandbox/)
+Be aware it can change at any moment. This is my sandbox after all.
+This currently includes [my PR to teleport on generated ground and mushrooms](https://github.com/feiss/aframe-environment-component/pull/21)
+and a fix for GearVR controller to highlight pressed buttons (now merged in master).
 
 The initial commit of this repo is actually
 ngokevin's [aframe-react-boilerplate](https://github.com/ngokevin/aframe-react-boilerplate)
