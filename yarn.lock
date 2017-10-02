@@ -66,9 +66,9 @@ aframe-ar@chenzlabs/aframe-ar:
   version "0.1.0"
   resolved "https://codeload.github.com/chenzlabs/aframe-ar/tar.gz/537c51c5d3f84f71c37eeabfd3dd8bc6405b8053"
 
-aframe-environment-component@^1.0.0:
+aframe-environment-component@vincentfretin/aframe-environment-component#teleport-on-generated-ground:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/aframe-environment-component/-/aframe-environment-component-1.0.0.tgz#dde6a8734dc7777d9c4a00b5bab25f877e8b3b37"
+  resolved "https://codeload.github.com/vincentfretin/aframe-environment-component/tar.gz/db6a77e706d99e2ebe9c51fe3317fb79fc456a59"
 
 aframe-event-set-component@^3.0.3:
   version "3.0.3"
@@ -110,9 +110,9 @@ aframe-teleport-controls@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/aframe-teleport-controls/-/aframe-teleport-controls-0.3.0.tgz#7c854941757703f06a5100e47abccfeeb427d7fc"
 
-aframe@^0.7.0:
+aframe@vincentfretin/aframe#fix-increasing-offset:
   version "0.7.0"
-  resolved "https://registry.yarnpkg.com/aframe/-/aframe-0.7.0.tgz#2c7b31466452d0060ad14426f8d660f97440e3b8"
+  resolved "https://codeload.github.com/vincentfretin/aframe/tar.gz/4da8fe49e3666d24997575ab0bf908d68c87faaa"
   dependencies:
     "@tweenjs/tween.js" "^16.8.0"
     browserify-css "^0.8.2"

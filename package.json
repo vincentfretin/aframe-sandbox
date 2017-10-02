@@ -3,10 +3,10 @@
   "version": "3.0.1",
   "description": "Boilerplate for building virtual reality experiences with A-Frame and React.",
   "dependencies": {
-    "aframe": "^0.7.0",
+    "aframe": "vincentfretin/aframe#fix-increasing-offset",
     "aframe-animation-component": "^3.2.5",
     "aframe-ar": "chenzlabs/aframe-ar",
-    "aframe-environment-component": "^1.0.0",
+    "aframe-environment-component": "vincentfretin/aframe-environment-component#teleport-on-generated-ground",
     "aframe-event-set-component": "^3.0.3",
     "aframe-extras": "^3.12.3",
     "aframe-particle-system-component": "^1.0.8",
