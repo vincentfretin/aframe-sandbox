@@ -192,9 +192,10 @@ class App extends React.Component {
           {/* <a-camera universal-controls="movementControls: gamepad" /> */}
           <a-camera />
           {/* <a-entity camera look-controls /> */}
+          {/* button: trigger;  */}
           <a-entity
             class="right-controller"
-            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
+            teleport-controls="cameraRig: #cameraRig; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
             // gearvr-controls
             laser-controls
             raycaster="objects: .cube"
