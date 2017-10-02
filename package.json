@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngokevin/aframe-react-boilerplate.git"
+    "url": "git+https://github.com/vincentfretin/aframe-sandbox.git"
   },
   "keywords": [
     "aframe",
@@ -41,12 +41,12 @@
     "aframe-react",
     "webvr"
   ],
-  "author": "Kevin Ngo <kngo@mozilla.com>",
+  "author": "Vincent Fretin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ngokevin/aframe-react-boilerplate/issues"
+    "url": "https://github.com/vincentfretin/aframe-sandbox/issues"
   },
-  "homepage": "https://github.com/ngokevin/aframe-react-boilerplate#readme",
+  "homepage": "https://github.com/vincentfretin/aframe-sandbox#readme",
   "devDependencies": {
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
