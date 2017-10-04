@@ -10,6 +10,13 @@ import "super-hands";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 
+const superHandsRaycasterConfig = {
+  colliderEvent: "raycaster-intersection",
+  colliderEventProperty: "els",
+  colliderEndEvent: "raycaster-intersection-cleared",
+  colliderEndEventProperty: "el",
+  colliderState: ""
+};
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -189,18 +196,21 @@ class App extends React.Component {
         </Entity> */}
 
         <a-entity id="cameraRig">
+          {/* progressive-controls="objects: .cube" */}
           {/* <a-camera universal-controls="movementControls: gamepad" /> */}
           <a-camera />
           {/* <a-entity camera look-controls /> */}
           {/* button: trigger;  */}
-          <a-entity
+          <Entity
             class="right-controller"
-            teleport-controls="cameraRig: #cameraRig; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
             // gearvr-controls
             laser-controls
             raycaster="objects: .cube"
             // line="color: red; opacity: 0.75"
-            super-hands
+            super-hands={superHandsRaycasterConfig}
+            // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: el; colliderState:"
+            static-body
           />
         </a-entity>
       </Scene>
