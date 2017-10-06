@@ -14,7 +14,7 @@ const superHandsRaycasterConfig = {
   colliderEvent: "raycaster-intersection",
   colliderEventProperty: "els",
   colliderEndEvent: "raycaster-intersection-cleared",
-  colliderEndEventProperty: "el",
+  colliderEndEventProperty: "clearedEls",
   colliderState: ""
 };
 class App extends React.Component {
@@ -59,7 +59,7 @@ class App extends React.Component {
             hoverable
             grabbable
             drag-droppable
-            dynamic-body
+            // dynamic-body
           />
           <a-mixin
             id="cube-hovered"
@@ -97,7 +97,6 @@ class App extends React.Component {
         /> */}
 
         <Entity
-          dynamic-body
           hoverable
           grabbable
           drag-droppable
@@ -112,7 +111,6 @@ class App extends React.Component {
           hoverable
           grabbable
           drag-droppable
-          dynamic-body
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           // animation__rotate={{
@@ -209,8 +207,8 @@ class App extends React.Component {
             raycaster="objects: .cube"
             // line="color: red; opacity: 0.75"
             super-hands={superHandsRaycasterConfig}
-            // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: el; colliderState:"
-            static-body
+            // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
+            // static-body
           />
         </a-entity>
       </Scene>
