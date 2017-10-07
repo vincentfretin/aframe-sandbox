@@ -59,7 +59,7 @@ class App extends React.Component {
             hoverable
             grabbable
             drag-droppable
-            // dynamic-body
+            dynamic-body
           />
           <a-mixin
             id="cube-hovered"
@@ -97,9 +97,6 @@ class App extends React.Component {
         /> */}
 
         <Entity
-          hoverable
-          grabbable
-          drag-droppable
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           position={{ x: 2, y: 1, z: -3 }}
@@ -108,9 +105,6 @@ class App extends React.Component {
 
         <Entity
           id="box"
-          hoverable
-          grabbable
-          drag-droppable
           geometry={{ primitive: "box" }}
           material={{ color: this.state.color, opacity: 0.6 }}
           // animation__rotate={{
@@ -192,13 +186,18 @@ class App extends React.Component {
             }}
           />
         </Entity> */}
-
+        {/* <a-entity id="cameraRig" progressive-controls="objects: .cube">
+          <a-entity
+            class="right-controller"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
+          />
+        </a-entity> */}
+        {/* progressive-controls="objects: .cube" */}
+        {/* <a-camera universal-controls="movementControls: gamepad" /> */}
+        {/* <a-entity camera look-controls /> */}
+        {/* button: trigger;  */}
         <a-entity id="cameraRig">
-          {/* progressive-controls="objects: .cube" */}
-          {/* <a-camera universal-controls="movementControls: gamepad" /> */}
           <a-camera />
-          {/* <a-entity camera look-controls /> */}
-          {/* button: trigger;  */}
           <Entity
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
@@ -208,7 +207,7 @@ class App extends React.Component {
             // line="color: red; opacity: 0.75"
             super-hands={superHandsRaycasterConfig}
             // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
-            // static-body
+            static-body="shape: sphere; sphereRadius: 0.02"
           />
         </a-entity>
       </Scene>
