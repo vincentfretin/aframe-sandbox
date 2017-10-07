@@ -4,7 +4,7 @@ import "aframe-particle-system-component";
 import "aframe-teleport-controls";
 import "aframe-environment-component";
 import "aframe-physics-system";
-import "aframe-extras";
+// import "aframe-extras";
 import "aframe-event-set-component";
 import "super-hands";
 import { Entity, Scene } from "aframe-react";
