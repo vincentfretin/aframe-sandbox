@@ -66,9 +66,9 @@ aframe-environment-component@vincentfretin/aframe-environment-component#ground-s
   version "1.0.0"
   resolved "https://codeload.github.com/vincentfretin/aframe-environment-component/tar.gz/2890e0670a1ffc6fd24524c84381b7d19559f67d"
 
-aframe-event-set-component@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-3.0.3.tgz#0b5556fefde3af81b55592e5f3c77e67fe2b76e2"
+aframe-event-set-component@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-4.0.1.tgz#a0ba58d527f506d6e75ce7c77671001fc6f4fe8b"
 
 aframe-extras@^3.12.3:
   version "3.12.4"

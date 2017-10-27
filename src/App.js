@@ -63,12 +63,13 @@ class App extends React.Component {
             draggable
             droppable
             dynamic-body
+            // event-set__mouseenter="material.opacity: 0.7"
+            // event-set__mouseleave="material.opacity: 1.0"
+            event-set__hover-start="material.opacity: 0.7"
+            event-set__hover-end="material.opacity: 1.0"
+            event-set__dragover-start="material.wireframe: true"
+            event-set__dragover-end="material.wireframe: false"
           />
-          <a-mixin
-            id="cube-hovered"
-            material="opacity: 0.7; transparent: true"
-          />
-          <a-mixin id="cube-dragover" material="wireframe: true;" />
         </a-assets>
 
         {/* <Entity
