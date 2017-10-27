@@ -66,9 +66,9 @@ aframe-ar@chenzlabs/aframe-ar:
   version "0.1.0"
   resolved "https://codeload.github.com/chenzlabs/aframe-ar/tar.gz/537c51c5d3f84f71c37eeabfd3dd8bc6405b8053"
 
-aframe-environment-component@vincentfretin/aframe-environment-component:
+aframe-environment-component@vincentfretin/aframe-environment-component#ground-static-body:
   version "1.0.0"
-  resolved "https://codeload.github.com/vincentfretin/aframe-environment-component/tar.gz/5a4757e3e7b8331edf3d69e93ae5d119ecce5e59"
+  resolved "https://codeload.github.com/vincentfretin/aframe-environment-component/tar.gz/2890e0670a1ffc6fd24524c84381b7d19559f67d"
 
 aframe-event-set-component@^3.0.3:
   version "3.0.3"

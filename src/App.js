@@ -33,6 +33,7 @@ class App extends React.Component {
 
   render() {
     return (
+      // <Scene physics="debug:true">
       <Scene>
         <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 10; dressingAmount: 20" />
         <a-box
