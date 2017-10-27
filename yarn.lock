@@ -92,9 +92,9 @@ aframe-physics-system@^1.4.3:
     cannon "github:donmccurdy/cannon.js#v0.6.2-dev1"
     three-to-cannon "^1.1.1"
 
-aframe-physics-system@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/aframe-physics-system/-/aframe-physics-system-2.0.0.tgz#a17e93183da99bc35c57134f634c634e9806a654"
+aframe-physics-system@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/aframe-physics-system/-/aframe-physics-system-2.1.0.tgz#0dfeea5dfa4744a966eb87242dfc6a3e851bbf4a"
   dependencies:
     browserify "^14.3.0"
     budo "^10.0.3"

@@ -10,7 +10,7 @@
     "aframe-event-set-component": "^3.0.3",
     "aframe-extras": "^3.12.3",
     "aframe-particle-system-component": "^1.0.8",
-    "aframe-physics-system": "^2.0.0",
+    "aframe-physics-system": "^2.1.0",
     "aframe-react": "^4.0.x",
     "aframe-teleport-controls": "^0.3.0",
     "babel-polyfill": "^6.3.14",

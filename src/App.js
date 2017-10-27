@@ -33,17 +33,17 @@ class App extends React.Component {
 
   render() {
     return (
-      // <Scene physics="debug:true">
-      <Scene>
+      <Scene physics="debug:true">
+        {/* <Scene> */}
         <Entity environment="ground: canyon; groundYScale: 10; groundTexture: squares; dressing: mushrooms; dressingScale: 10; dressingAmount: 20" />
-        <a-box
+        {/* <a-box
           id="floorgeometry"
           static-body
           width="100"
           height="0.001"
           depth="100"
           visible="false"
-        />
+        /> */}
         <a-assets>
           {/* <img
             id="groundTexture"
