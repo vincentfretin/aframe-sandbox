@@ -60,7 +60,8 @@ class App extends React.Component {
             geometry="primitive: box; width: 0.33; height: 0.33; depth: 0.33"
             hoverable
             grabbable
-            drag-droppable
+            draggable
+            droppable
             dynamic-body
           />
           <a-mixin
