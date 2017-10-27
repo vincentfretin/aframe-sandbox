@@ -46,6 +46,7 @@ To get started:
 
 ```bash
 yarn
+yarn add vincentfretin/aframe-environment-component#ground-static-body
 npm start
 ```
 
