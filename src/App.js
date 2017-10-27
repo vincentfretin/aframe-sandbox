@@ -205,6 +205,7 @@ class App extends React.Component {
           id="cameraRig"
           progressive-controls="objects: .cube,[grabbable]"
         >
+          <a-camera user-height="1.6" />
           <a-entity
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
@@ -215,7 +216,7 @@ class App extends React.Component {
         {/* <a-entity camera look-controls /> */}
         {/* button: trigger;  */}
         {/* <a-entity id="cameraRig">
-          <a-camera />
+          <a-camera user-height="1.6" />
           <Entity
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
@@ -223,8 +224,8 @@ class App extends React.Component {
             laser-controls
             raycaster="objects: .cube,[grabbable]"
             // line="color: red; opacity: 0.75"
-            super-hands={superHandsRaycasterConfig}
-            // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
+            // super-hands={superHandsRaycasterConfig}
+            super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
             static-body="shape: sphere; sphereRadius: 0.02"
           />
         </a-entity> */}

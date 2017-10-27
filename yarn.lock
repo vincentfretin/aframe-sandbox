@@ -6985,9 +6985,9 @@ subarg@^1.0.0:
   dependencies:
     minimist "^1.1.0"
 
-super-hands@vincentfretin/aframe-super-hands-component#rasycaster-clearedEls:
-  version "2.0.1"
-  resolved "https://codeload.github.com/vincentfretin/aframe-super-hands-component/tar.gz/126b91406e6fe3de60a240d454a98a54d37a46e8"
+super-hands@wmurphyrd/aframe-super-hands-component:
+  version "2.0.2"
+  resolved "https://codeload.github.com/wmurphyrd/aframe-super-hands-component/tar.gz/71b837b3d75c41532ddb83e1ee52ab94494380d8"
 
 supports-color@1.3.1:
   version "1.3.1"

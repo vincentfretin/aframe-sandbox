@@ -18,7 +18,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.7",
-    "super-hands": "vincentfretin/aframe-super-hands-component#rasycaster-clearedEls",
+    "super-hands": "wmurphyrd/aframe-super-hands-component",
     "three.ar.js": "^0.1.3"
   },
   "scripts": {
