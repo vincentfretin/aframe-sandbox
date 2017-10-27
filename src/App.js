@@ -7,6 +7,7 @@ import "aframe-physics-system";
 // import "aframe-extras";
 import "aframe-event-set-component";
 import "super-hands";
+import "./material-displacement";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 
@@ -174,6 +175,20 @@ class App extends React.Component {
           material="color: green"
         />
 
+        <a-sphere
+          material-displacement
+          position="0.8 1 -2"
+          radius="0.4"
+          segments-height="18"
+          segments-width="36"
+          // wireframe="true"
+          hoverable
+          grabbable
+          draggable
+          droppable
+          dynamic-body
+        />
+
         {/* <Entity primitive="a-camera">
           <Entity
             primitive="a-cursor"
@@ -186,7 +201,10 @@ class App extends React.Component {
             }}
           />
         </Entity> */}
-        <a-entity id="cameraRig" progressive-controls="objects: .cube">
+        <a-entity
+          id="cameraRig"
+          progressive-controls="objects: .cube,[grabbable]"
+        >
           <a-entity
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
@@ -203,7 +221,7 @@ class App extends React.Component {
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
             // gearvr-controls
             laser-controls
-            raycaster="objects: .cube"
+            raycaster="objects: .cube,[grabbable]"
             // line="color: red; opacity: 0.75"
             super-hands={superHandsRaycasterConfig}
             // super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
