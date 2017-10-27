@@ -203,7 +203,7 @@ class App extends React.Component {
             }}
           />
         </Entity> */}
-        <a-entity
+        {/*<a-entity
           id="cameraRig"
           progressive-controls="objects: .cube,[grabbable]"
         >
@@ -212,12 +212,12 @@ class App extends React.Component {
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
           />
-        </a-entity>
+        </a-entity> */}
         {/* progressive-controls="objects: .cube" */}
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         {/* <a-entity camera look-controls /> */}
         {/* button: trigger;  */}
-        {/* <a-entity id="cameraRig">
+        <a-entity id="cameraRig">
           <a-camera user-height="1.6" />
           <Entity
             class="right-controller"
@@ -230,7 +230,7 @@ class App extends React.Component {
             super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
             static-body="shape: sphere; sphereRadius: 0.02"
           />
-        </a-entity> */}
+        </a-entity>
       </Scene>
     );
   }
