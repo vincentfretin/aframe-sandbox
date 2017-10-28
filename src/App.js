@@ -11,13 +11,6 @@ import "./material-displacement";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 
-// const superHandsRaycasterConfig = {
-//   colliderEvent: "raycaster-intersection",
-//   colliderEventProperty: "els",
-//   colliderEndEvent: "raycaster-intersection-cleared",
-//   colliderEndEventProperty: "clearedEls",
-//   colliderState: ""
-// };
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -192,19 +185,8 @@ class App extends React.Component {
           dynamic-body
         />
 
-        {/* <Entity primitive="a-camera">
-          <Entity
-            primitive="a-cursor"
-            animation__click={{
-              property: "scale",
-              startEvents: "click",
-              from: "0.1 0.1 0.1",
-              to: "1 1 1",
-              dur: 150
-            }}
-          />
-        </Entity> */}
-        {/*<a-entity
+        {/* <a-camera universal-controls="movementControls: gamepad" /> */}
+        <a-entity
           id="cameraRig"
           progressive-controls="objects: .cube,[grabbable]"
         >
@@ -213,25 +195,20 @@ class App extends React.Component {
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
           />
-        </a-entity> */}
-        {/* progressive-controls="objects: .cube" */}
-        {/* <a-camera universal-controls="movementControls: gamepad" /> */}
-        {/* <a-entity camera look-controls /> */}
-        {/* button: trigger;  */}
-        <a-entity id="cameraRig">
+        </a-entity>
+        {/* <a-entity id="cameraRig">
           <a-camera user-height="1.6" />
-          <Entity
+          <a-entity
             class="right-controller"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
             // gearvr-controls
             laser-controls
             raycaster="objects: .cube,[grabbable]"
             // line="color: red; opacity: 0.75"
-            // super-hands={superHandsRaycasterConfig}
             super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent: raycaster-intersection-cleared; colliderEndEventProperty: clearedEls; colliderState:"
             static-body="shape: sphere; sphereRadius: 0.02"
           />
-        </a-entity>
+        </a-entity> */}
       </Scene>
     );
   }
