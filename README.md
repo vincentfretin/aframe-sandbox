@@ -4,18 +4,14 @@ I publish some time to time a working version at
 [https://vincentfretin.github.io/aframe-sandbox/](https://vincentfretin.github.io/aframe-sandbox/)
 
 Be aware it can change at any moment. This is my sandbox after all.
-This currently includes:
-
-- [my PR to teleport on generated ground and mushrooms](https://github.com/feiss/aframe-environment-component/pull/21)
-- aframe master with a fix for GearVR controller to highlight pressed buttons and several fixes for raycaster
-- super-hands master with progressive-controls that works again on GearVR
+I currently use branches of several modules, see `package.json`.
 
 Current things you can do in the environment:
 
 - teleport on the ground, dressing and cubes with the trigger button on GearVR
 - grab small cubes with trackpad button (just touch, no need to click)
+- grab a fireball!
 - click on the big cube with a small cube inside it to change the color of the two big cubes
-
 
 The initial commit of this repo is actually
 ngokevin's [aframe-react-boilerplate](https://github.com/ngokevin/aframe-react-boilerplate)
@@ -46,7 +42,8 @@ To get started:
 
 ```bash
 yarn
-yarn add vincentfretin/aframe-environment-component#ground-static-body
+# to modify aframe source code, replace `"main": "dist/aframe-master.js"` by `"main": "src/index.js"` in `node_modules/aframe/package.json`
+# to be able to teleport on ground, edit `node_modules/aframe-teleport-controls/index.js` and `return true` in `isValidNormalsAngle`
 npm start
 ```
 
