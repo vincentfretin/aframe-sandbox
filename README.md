@@ -43,6 +43,7 @@ To get started:
 ```bash
 yarn
 # to modify aframe source code, replace `"main": "dist/aframe-master.js"` by `"main": "src/index.js"` in `node_modules/aframe/package.json`
+# edit node_modules/aframe/src/components/look-controls.js and comment `this.controls.userHeight = this.getUserHeight();`
 # to be able to teleport on ground, edit `node_modules/aframe-teleport-controls/index.js` and `return true` in `isValidNormalsAngle`
 npm start
 ```
