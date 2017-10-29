@@ -48,6 +48,18 @@ yarn
 npm start
 ```
 
+### Run it with GearVR
+
+On Ubuntu, allow the the 3000 port with `ufw allow 3000`
+Get your machine ip with `iconfig`.
+Be sure your phone is on the same network as your machine, via wifi.
+Put on your headset, open Oculus browser and type `http://192.168.1.24:3000`
+(change the ip by yours). You really need to type `http://` yourself, otherwise
+it doesn't load.
+
+
+### publish to GitHub Pages
+
 To publish to GitHub Pages:
 
 ```bash
