@@ -36,6 +36,10 @@ and configure hot module reloading in `src/index.js`
 The `npm run eject` was needed only to take into account the new babel config
 in package.json.
 
+For an example how to configure webpack with glsify-loader to use a custom
+shader, see [this commit](
+https://github.com/vincentfretin/aframe-sandbox/commit/9b3e6ff088599910a673de7b24f19b390a5c9689)
+
 ### Installation
 
 To get started:
