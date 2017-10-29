@@ -9,7 +9,6 @@
     "aframe-particle-system-component": "^1.0.8",
     "aframe-physics-system": "^2.1.0",
     "aframe-react": "^4.0.x",
-    "aframe-teleport-controls": "^0.3.0",
     "glsl-noise": "^0.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
