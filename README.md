@@ -4,7 +4,7 @@ I publish some time to time a working version at
 [https://vincentfretin.github.io/aframe-sandbox/](https://vincentfretin.github.io/aframe-sandbox/)
 
 Be aware it can change at any moment. This is my sandbox after all.
-I currently use branches of several modules, see `package.json`.
+I currently use branches of several modules, see `workspaces-install.sh`.
 
 Current things you can do in the environment:
 
@@ -45,6 +45,7 @@ https://github.com/vincentfretin/aframe-sandbox/commit/9b3e6ff088599910a673de7b2
 To get started:
 
 ```bash
+./workspaces-install.sh
 yarn
 # to modify aframe source code, replace `"main": "dist/aframe-master.js"` by `"main": "src/index.js"` in `node_modules/aframe/package.json`
 # edit node_modules/aframe/src/components/look-controls.js and comment `this.controls.userHeight = this.getUserHeight();`
@@ -68,13 +69,3 @@ To publish to GitHub Pages:
 ```bash
 npm run publish
 ```
-
-### Troubleshooting
-
-If the cubes fall through the floor when the scene load, it means
-that the aframe-environment-component branch is wrong.
-Yarn has an issue apparently with cached package, do:
-
-    rm -rf ~/.yarn-cache
-    rm -rf node_modules
-    yarn
