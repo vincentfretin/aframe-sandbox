@@ -57,7 +57,6 @@ Put on your headset, open Oculus browser and type `http://192.168.1.24:3000`
 (change the ip by yours). You really need to type `http://` yourself, otherwise
 it doesn't load.
 
-
 ### publish to GitHub Pages
 
 To publish to GitHub Pages:
@@ -65,3 +64,13 @@ To publish to GitHub Pages:
 ```bash
 npm run publish
 ```
+
+### Troubleshooting
+
+If the cubes fall through the floor when the scene load, it means
+that the aframe-environment-component branch is wrong.
+Yarn has an issue apparently with cached package, do:
+
+    rm -rf ~/.yarn-cache
+    rm -rf node_modules
+    yarn
