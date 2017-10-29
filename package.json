@@ -12,7 +12,7 @@
     "aframe-particle-system-component": "^1.0.8",
     "aframe-physics-system": "^2.1.0",
     "aframe-react": "^4.0.x",
-    "aframe-teleport-controls": "vincentfretin/aframe-teleport-controls",
+    "aframe-teleport-controls": "^0.3.0",
     "babel-polyfill": "^6.3.14",
     "glsl-noise": "^0.0.0",
     "react": "^15.4.1",

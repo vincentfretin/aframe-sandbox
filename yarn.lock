@@ -102,9 +102,9 @@ aframe-react@^4.0.x:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/aframe-react/-/aframe-react-4.3.0.tgz#43eba68be4a1e88830aac404e90ac033945fbf54"
 
-aframe-teleport-controls@vincentfretin/aframe-teleport-controls:
+aframe-teleport-controls@^0.3.0:
   version "0.3.0"
-  resolved "https://codeload.github.com/vincentfretin/aframe-teleport-controls/tar.gz/4ade4e700d6413fa233407473dadf7ba069eb3db"
+  resolved "https://registry.yarnpkg.com/aframe-teleport-controls/-/aframe-teleport-controls-0.3.0.tgz#7c854941757703f06a5100e47abccfeeb427d7fc"
 
 aframe@aframevr/aframe:
   version "0.7.0"
