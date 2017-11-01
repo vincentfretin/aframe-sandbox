@@ -6,3 +6,7 @@ echo "(`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'` of `git
 function git_pull() {
 echo "===== `basename $PWD` `git_branch` ====="; git pull; echo; echo;
 }
+
+function git_update_from_upstream() {
+echo "===== `basename $PWD` `git_branch` ====="; git fetch upstream master; git stash; git pull --rebase upstream master; git stash pop; echo; echo;
+}
