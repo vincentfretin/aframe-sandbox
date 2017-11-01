@@ -56,8 +56,6 @@ class App extends React.Component {
             draggable
             droppable
             dynamic-body
-            // event-set__mouseenter="material.opacity: 0.7"
-            // event-set__mouseleave="material.opacity: 1.0"
             event-set__hover-start="material.opacity: 0.7"
             event-set__hover-end="material.opacity: 1.0"
             event-set__dragover-start="material.wireframe: true"
@@ -92,13 +90,6 @@ class App extends React.Component {
           text={{ value: "Salut Michael!", align: "center" }}
           position={{ x: 0, y: 2, z: -1 }}
         /> */}
-
-        <Entity
-          geometry={{ primitive: "box" }}
-          material={{ color: this.state.color, opacity: 0.6 }}
-          position={{ x: 2, y: 1, z: -3 }}
-          class="cube"
-        />
 
         <Entity
           id="box"
@@ -137,18 +128,6 @@ class App extends React.Component {
         <a-entity
           class="cube"
           mixin="cube"
-          position="0 0.265 -1"
-          material="color: red"
-        />
-        <a-entity
-          class="cube"
-          mixin="cube"
-          position="0 0.265 -0.5"
-          material="color: red"
-        />
-        <a-entity
-          class="cube"
-          mixin="cube"
           position="-1 0.265 -1"
           material="color: blue"
         />
@@ -156,7 +135,7 @@ class App extends React.Component {
           class="cube"
           mixin="cube"
           position="-1 0.265 -0.5"
-          material="color: blue"
+          material="color: red"
         />
         <a-entity
           class="cube"
@@ -168,12 +147,12 @@ class App extends React.Component {
           class="cube"
           mixin="cube"
           position="1 0.265 -0.5"
-          material="color: green"
+          material="color: yellow"
         />
 
         <a-sphere
           material-displacement
-          position="0.8 1 -2"
+          position="2 1 -3"
           radius="0.4"
           segments-height="18"
           segments-width="36"
