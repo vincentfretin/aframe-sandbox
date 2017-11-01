@@ -8,10 +8,10 @@ I currently use branches of several modules, see `workspaces-install.sh`.
 
 Current things you can do in the environment:
 
-- teleport on the ground, dressing and cubes with the trigger button on GearVR
-- grab small cubes with trackpad button (just touch, no need to click)
-- grab a fireball!
-- click on the big cube with a small cube inside it to change the color of the two big cubes
+- teleport on the ground, dressing, big cube, voxels with the trigger button on GearVR
+- grab the fireball and small cubes with trackpad touch (just touch, not click)
+- click on the big cube to change its color
+- create voxels on trackpad click on the first pink voxel on your left
 
 The initial commit of this repo is actually
 ngokevin's [aframe-react-boilerplate](https://github.com/ngokevin/aframe-react-boilerplate)
