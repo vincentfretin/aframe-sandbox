@@ -7,9 +7,9 @@ import "aframe-physics-system";
 // import "aframe-extras";
 import "aframe-event-set-component";
 import "super-hands";
-import "./material-displacement";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
+import "./components/material-displacement";
 
 class App extends React.Component {
   constructor(props) {

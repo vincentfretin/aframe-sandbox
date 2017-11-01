@@ -1,7 +1,7 @@
 /* global AFRAME, THREE */
 
-const vertexShader = require("./shaders/vertex.glsl");
-const fragmentShader = require("./shaders/fragment.glsl");
+const vertexShader = require("../shaders/vertex.glsl");
+const fragmentShader = require("../shaders/fragment.glsl");
 
 AFRAME.registerComponent("material-displacement", {
   /**
@@ -14,7 +14,7 @@ AFRAME.registerComponent("material-displacement", {
         tExplosion: {
           type: "t",
           value: THREE.ImageUtils.loadTexture(
-            require("./shaders/explosion.png")
+            require("../shaders/explosion.png")
           )
         },
         time: { type: "f", value: 0.0 }
