@@ -10,6 +10,8 @@ import "super-hands";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 import "./components/material-displacement";
+import "./components/snap";
+import "./components/intersection-spawn";
 
 class App extends React.Component {
   constructor(props) {
@@ -60,6 +62,15 @@ class App extends React.Component {
             event-set__hover-end="material.opacity: 1.0"
             event-set__dragover-start="material.wireframe: true"
             event-set__dragover-end="material.wireframe: false"
+          />
+
+          <a-mixin
+            id="voxel"
+            geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"
+            intersection-spawn="event: click; mixin: voxel; material.color: green"
+            snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
+            event-set__mouseenter="material.opacity: 0.7"
+            event-set__mouseleave="material.opacity: 1.0"
           />
         </a-assets>
 
@@ -150,6 +161,8 @@ class App extends React.Component {
           material="color: yellow"
         />
 
+        <a-entity mixin="voxel" position="-3 0 -3" material="color: pink" />
+
         <a-sphere
           material-displacement
           position="2 1 -3"
@@ -167,19 +180,20 @@ class App extends React.Component {
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         <a-entity
           id="cameraRig"
-          progressive-controls="objects: .cube,[grabbable]"
+          progressive-controls="objects: .cube,[mixin='voxel'],[grabbable]"
         >
           <a-camera user-height="1.6" />
           <a-entity
             class="right-controller"
-            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
+            cursor="fuse: false; downEvents: trackpaddown; upEvents: trackpadup"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
           />
         </a-entity>
         {/* <a-entity id="cameraRig">
           <a-camera user-height="1.6" />
           <a-entity
             class="right-controller"
-            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
             // gearvr-controls
             laser-controls
             raycaster="objects: .cube,[grabbable]"
