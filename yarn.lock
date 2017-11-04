@@ -103,6 +103,10 @@ aframe-animation-component@^3.2.5:
   dependencies:
     animejs "^1.1.0"
 
+aframe-entity-generator-component@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/aframe-entity-generator-component/-/aframe-entity-generator-component-3.0.1.tgz#7d8ebc0dfbab8ef34b3e2b100d72cbab45961bca"
+
 aframe-event-set-component@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-3.0.3.tgz#0b5556fefde3af81b55592e5f3c77e67fe2b76e2"
@@ -121,6 +125,10 @@ aframe-extras@^3.12.3, aframe-extras@^3.12.4:
 aframe-fps-counter-component@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/aframe-fps-counter-component/-/aframe-fps-counter-component-1.0.1.tgz#cd7e8881533956f935e15bf3e656b7d9696d49c2"
+
+aframe-look-at-component@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/aframe-look-at-component/-/aframe-look-at-component-0.6.0.tgz#9a45e4c66110cbf4c03a110fccc1bbd992081d5f"
 
 aframe-machinima-testing@^0.1.2:
   version "0.1.2"
@@ -153,6 +161,10 @@ aframe-physics-system@^2.1.0:
     cannon "github:donmccurdy/cannon.js#v0.6.2-dev1"
     three-to-cannon "^1.1.1"
     webworkify "^1.4.0"
+
+aframe-randomizer-components@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/aframe-randomizer-components/-/aframe-randomizer-components-3.0.2.tgz#858c5338bceb41623693fc2f87f435ca851c870b"
 
 aframe-react@^4.0.x:
   version "4.3.0"

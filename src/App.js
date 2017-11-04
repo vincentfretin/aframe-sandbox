@@ -9,6 +9,9 @@ import "aframe-physics-system";
 import "aframe-event-set-component";
 import "aframe-4dof-controls-component";
 import "super-hands";
+import "aframe-randomizer-components";
+import "aframe-entity-generator-component";
+import "aframe-look-at-component";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
 import "./components/material-displacement";
@@ -51,6 +54,19 @@ class App extends React.Component {
             id="skyTexture"
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           /> */}
+
+          <a-asset-item id="bird-obj" src="/CactusWren/CactusWren.obj" />
+          {/* <a-asset-item id="bird-mtl" src="/CactusWren/CactusWren.mtl" /> */}
+
+          <a-mixin
+            id="bird"
+            // obj-model="obj: #bird-obj; mtl: #bird-mtl"
+            obj-model="obj: #bird-obj"
+            material="color: #645146"
+            scale="0.2 0.2 0.2"
+            random-position="min: -5 0 -5; max: 5 0 5"
+            look-at="#cameraRig"
+          />
 
           <a-mixin
             id="cube"
@@ -178,6 +194,8 @@ class App extends React.Component {
           droppable
           dynamic-body
         />
+
+        <a-entity entity-generator="mixin: bird; num: 100" />
 
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         <a-entity
