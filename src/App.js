@@ -3,6 +3,7 @@ import "aframe-animation-component";
 import "aframe-particle-system-component";
 import "aframe-teleport-controls";
 import "aframe-environment-component";
+import "aframe-fps-counter-component";
 import "aframe-physics-system";
 // import "aframe-extras";
 import "aframe-event-set-component";
@@ -187,7 +188,9 @@ class App extends React.Component {
             class="right-controller"
             cursor="fuse: false; downEvents: trackpaddown; upEvents: trackpadup"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
-          />
+          >
+            <a-entity fps-counter="for90fps: false" position="0 0 -1" />
+          </a-entity>
         </a-entity>
         {/* <a-entity id="cameraRig">
           <a-camera user-height="1.6" />
