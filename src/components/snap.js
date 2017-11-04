@@ -24,8 +24,6 @@ AFRAME.registerComponent("snap", {
     pos.x = Math.floor(pos.x / data.snap.x) * data.snap.x + data.offset.x;
     pos.y = Math.floor(pos.y / data.snap.y) * data.snap.y + data.offset.y;
     pos.z = Math.floor(pos.z / data.snap.z) * data.snap.z + data.offset.z;
-    // TODO: calculated position is wrong when clicking on some faces of a cube,
-    // it spawns exactly on the same position of the clicked cube
     this.el.setAttribute("position", pos);
   }
 });
