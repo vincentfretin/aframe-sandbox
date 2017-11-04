@@ -7,6 +7,7 @@ import "aframe-fps-counter-component";
 import "aframe-physics-system";
 // import "aframe-extras";
 import "aframe-event-set-component";
+import "aframe-4dof-controls-component";
 import "super-hands";
 import { Entity, Scene } from "aframe-react";
 import React from "react";
@@ -187,9 +188,15 @@ class App extends React.Component {
           <a-entity
             class="right-controller"
             cursor="fuse: false; downEvents: trackpaddown; upEvents: trackpadup"
+            // hand-4dof-controls="target: #hand"
             teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
           >
             <a-entity fps-counter="for90fps: false" position="0 0 -1" />
+            {/* <a-entity
+              id="hand"
+              material="color: #f33"
+              geometry="primitive: icosahedron; detail: 0; radius: 0.05"
+            /> */}
           </a-entity>
         </a-entity>
         {/* <a-entity id="cameraRig">

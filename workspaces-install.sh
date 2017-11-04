@@ -17,3 +17,7 @@ test -d workspaces/aframe-teleport-controls && (cd workspaces/aframe-teleport-co
 test -d workspaces/aframe && (cd workspaces/aframe; git_pull) || (
     git clone git@github.com:vincentfretin/aframe workspaces/aframe && \
     cd workspaces/aframe && git remote add upstream git@github.com:aframevr/aframe.git)
+
+test -d workspaces/aframe-4dof-controls-component && (cd workspaces/aframe-4dof-controls-component; git_pull) || (
+    git clone git@github.com:vincentfretin/aframe-4dof-controls-component workspaces/aframe-4dof-controls-component && \
+    cd workspaces/aframe-4dof-controls-component && git remote add upstream git@github.com:fernandojsg/aframe-4dof-controls-component.git)
