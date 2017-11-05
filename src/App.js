@@ -55,15 +55,15 @@ class App extends React.Component {
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           /> */}
 
-          <a-asset-item id="bird-obj" src="/CactusWren/CactusWren.obj" />
-          {/* <a-asset-item id="bird-mtl" src="/CactusWren/CactusWren.mtl" /> */}
+          {/* <a-asset-item id="bird-obj" src="/CactusWren/CactusWren.obj" /> */}
+          <a-asset-item id="bird" src="/CactusWren/CactusWren.glb" />
 
           <a-mixin
             id="bird"
-            // obj-model="obj: #bird-obj; mtl: #bird-mtl"
-            obj-model="obj: #bird-obj"
-            material="color: #645146"
-            scale="0.2 0.2 0.2"
+            gltf-model="#bird"
+            // obj-model="obj: #bird-obj"
+            // material="color: #645146"
+            scale="0.1 0.1 0.1"
             random-position="min: -5 0 -5; max: 5 0 5"
             look-at="#cameraRig"
           />
@@ -195,7 +195,7 @@ class App extends React.Component {
           dynamic-body
         />
 
-        <a-entity entity-generator="mixin: bird; num: 100" />
+        <a-entity entity-generator="mixin: bird; num: 30" />
 
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         <a-entity
