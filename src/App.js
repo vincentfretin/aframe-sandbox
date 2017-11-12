@@ -207,7 +207,7 @@ class App extends React.Component {
             class="right-controller"
             cursor="fuse: false; downEvents: trackpaddown; upEvents: trackpadup"
             // hand-4dof-controls="target: #hand"
-            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
+            teleport-controls="cameraRig: #cameraRig; button: trigger; maxLength: 200; type: line; landingMaxAngle: 135; collisionEntities: .environmentGround, .environmentDressing, .cube, [mixin='voxel']"
           >
             <a-entity fps-counter="for90fps: false" position="0 0 -1" />
             {/* <a-entity
