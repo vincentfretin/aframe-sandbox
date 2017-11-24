@@ -17,6 +17,7 @@ import React from "react";
 import "./components/material-displacement";
 import "./components/snap";
 import "./components/intersection-spawn";
+import "./components/entity-generator-gltf-model";
 
 class App extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class App extends React.Component {
 
           <a-mixin
             id="bird"
-            gltf-model="#bird"
+            // gltf-model="#bird"
             // obj-model="obj: #bird-obj"
             // material="color: #645146"
             scale="0.1 0.1 0.1"
@@ -195,7 +196,7 @@ class App extends React.Component {
           dynamic-body
         />
 
-        <a-entity entity-generator="mixin: bird; num: 30" />
+        <a-entity entity-generator-gltf-model="mixin: bird; num: 30; src: #bird" />
 
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         <a-entity
