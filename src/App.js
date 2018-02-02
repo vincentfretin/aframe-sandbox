@@ -57,7 +57,7 @@ class App extends React.Component {
           /> */}
 
           {/* <a-asset-item id="bird-obj" src="/CactusWren/CactusWren.obj" /> */}
-          <a-asset-item id="bird" src="/CactusWren/CactusWren.glb" />
+          <a-asset-item id="bird-obj" src="/CactusWren/CactusWren.glb" />
 
           <a-mixin
             id="bird"
@@ -196,7 +196,7 @@ class App extends React.Component {
           dynamic-body
         />
 
-        <a-entity entity-generator-gltf-model="mixin: bird; num: 30; src: #bird" />
+        <a-entity entity-generator-gltf-model="mixin: bird; num: 30; src: #bird-obj" />
 
         {/* <a-camera universal-controls="movementControls: gamepad" /> */}
         <a-entity
